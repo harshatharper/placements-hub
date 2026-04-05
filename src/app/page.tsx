@@ -6,6 +6,8 @@ import {
   Brain,
   Phone,
   MessageSquare,
+  Hash,
+  Video,
 } from "lucide-react";
 
 const tools = [
@@ -49,6 +51,23 @@ const tools = [
     icon: MessageSquare,
     status: "live" as const,
     external: true,
+  },
+  {
+    title: "Placements Slack Channel",
+    description:
+      "Team communication, updates, and real-time coordination for placements",
+    href: "https://harper-insure.slack.com/archives/C0AQXBBHT5G",
+    icon: Hash,
+    status: "live" as const,
+    external: true,
+  },
+  {
+    title: "Training Videos",
+    description:
+      "Walkthroughs and onboarding videos for placements tools and processes",
+    href: "#",
+    icon: Video,
+    status: "pending" as const,
   },
 ];
 
