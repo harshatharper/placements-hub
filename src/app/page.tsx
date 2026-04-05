@@ -13,7 +13,7 @@ const tools = [
     title: "Placements Dashboard",
     description:
       "Centralized submission tracking, quote statuses, metrics, underwriter assignments",
-    href: "https://placements-dashboard.up.railway.app/dashboard",
+    href: "https://placements-dashboard-production.up.railway.app/dashboard",
     icon: Zap,
     status: "live" as const,
     external: true,
