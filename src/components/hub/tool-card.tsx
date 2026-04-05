@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Download } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const statusConfig = {
@@ -16,9 +16,10 @@ interface ToolCardProps {
   icon: LucideIcon;
   status: "live" | "in-progress" | "pending";
   external?: boolean;
+  download?: boolean;
 }
 
-export function ToolCard({ title, description, href, icon: Icon, status, external }: ToolCardProps) {
+export function ToolCard({ title, description, href, icon: Icon, status, external, download }: ToolCardProps) {
   const s = statusConfig[status];
   const isClickable = href !== "#";
 
@@ -36,7 +37,8 @@ export function ToolCard({ title, description, href, icon: Icon, status, externa
         <div className="mt-4">
           <CardTitle className="text-base font-semibold flex items-center gap-1.5">
             {title}
-            {external && <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />}
+            {download && <Download className="h-3.5 w-3.5 text-muted-foreground" />}
+            {external && !download && <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />}
           </CardTitle>
           <CardDescription className="text-sm mt-1 leading-relaxed">
             {description}
@@ -47,6 +49,14 @@ export function ToolCard({ title, description, href, icon: Icon, status, externa
   );
 
   if (!isClickable) return card;
+
+  if (download) {
+    return (
+      <a href={href} download>
+        {card}
+      </a>
+    );
+  }
 
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">

@@ -8,6 +8,7 @@ import {
   MessageSquare,
   Hash,
   Video,
+  Puzzle,
 } from "lucide-react";
 
 const tools = [
@@ -71,6 +72,18 @@ const tools = [
   },
 ];
 
+const resources = [
+  {
+    title: "Harper Remarket Extension",
+    description:
+      "Chrome extension to submit remarket requests directly from Big Brother company pages. Download, unzip, and follow the included setup guide.",
+    href: "/downloads/harper-remarket-extension.zip",
+    icon: Puzzle,
+    status: "live" as const,
+    download: true,
+  },
+];
+
 export default function HubPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -105,6 +118,22 @@ export default function HubPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {tools.map((tool) => (
             <ToolCard key={tool.title} {...tool} />
+          ))}
+        </div>
+
+        {/* Resources section */}
+        <div className="mt-14 mb-10">
+          <h2 className="text-2xl font-bold tracking-tight">
+            Resources
+          </h2>
+          <p className="text-muted-foreground mt-1.5 text-sm">
+            Downloads and setup materials for the placements team.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {resources.map((resource) => (
+            <ToolCard key={resource.title} {...resource} />
           ))}
         </div>
       </main>
