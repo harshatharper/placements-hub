@@ -9,6 +9,7 @@ import {
   Hash,
   Video,
   Puzzle,
+  Eye,
 } from "lucide-react";
 
 const tools = [
@@ -18,6 +19,15 @@ const tools = [
       "Centralized submission tracking, quote statuses, metrics, underwriter assignments",
     href: "https://placements-dashboard-production.up.railway.app/dashboard",
     icon: Zap,
+    status: "live" as const,
+    external: true,
+  },
+  {
+    title: "Big Brother",
+    description:
+      "Company profiles, deal pipeline, and CRM — the source of truth",
+    href: "https://harper.up.railway.app/",
+    icon: Eye,
     status: "live" as const,
     external: true,
   },
@@ -36,13 +46,6 @@ const tools = [
     icon: Brain,
     status: "live" as const,
     external: true,
-  },
-  {
-    title: "Tether (Phone)",
-    description: "Phone system for placement calls",
-    href: "#",
-    icon: Phone,
-    status: "pending" as const,
   },
   {
     title: "Underwriter Insights",
@@ -70,6 +73,13 @@ const tools = [
     icon: Video,
     status: "live" as const,
     external: true,
+  },
+  {
+    title: "Tether (Phone)",
+    description: "Phone system for placement calls",
+    href: "#",
+    icon: Phone,
+    status: "pending" as const,
   },
 ];
 
