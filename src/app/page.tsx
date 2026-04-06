@@ -66,9 +66,10 @@ const tools = [
     title: "Training Videos",
     description:
       "Walkthroughs and onboarding videos for placements tools and processes",
-    href: "#",
+    href: "https://drive.google.com/drive/folders/10m9oBWkOnhS7OH3O4GNm6bAVtm6mzZK-?usp=drive_link",
     icon: Video,
-    status: "pending" as const,
+    status: "live" as const,
+    external: true,
   },
 ];
 
