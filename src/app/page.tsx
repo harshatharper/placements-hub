@@ -32,7 +32,7 @@ const tools = [
     external: true,
   },
   {
-    title: "Email Client",
+    title: "Harper Mail",
     description: "Underwriter email communication — send, receive, search",
     href: "https://mail.harperinsure.com",
     icon: Mail,
